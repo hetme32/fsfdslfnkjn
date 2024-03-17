@@ -17,12 +17,6 @@ start_message = """
 async def start_command(_, update):
     await update.reply_text(start_message.format(update.from_user.mention), disable_web_page_preview=True)
 
-
-@AutoCaptionBot.on_callback_query(filters.regex("start"))
-async def start_callback(_, update):
-    await update.message.edit_text(start_message.format(update.from_user.mention), disable_web_page_preview=True)
-
-
 @AutoCaptionBot.on_message(filters.channel)
 async def edit_caption(_, update):
     media_obj, _ = get_file_details(update)
