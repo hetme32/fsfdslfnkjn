@@ -4,9 +4,9 @@ from config import *
 
 AutoCaptionBot = Client(
     "AutoCaptionBot",
-    api_id=app_id,
-    api_hash=api_hash,
-    bot_token=bot_token
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN
 )
 
 start_message = """
@@ -27,10 +27,10 @@ async def start_callback(_, update):
 async def edit_caption(_, update):
     media_obj, _ = get_file_details(update)
     try:
-        await update.edit_caption(caption=custom_caption.format(file_name=media_obj.file_name))
+        await update.edit_caption(caption=CUSTOM_CAPTION.format(file_name=media_obj.file_name))
     except asyncio.exceptions.TimeoutError as TimeoutError:
         await asyncio.sleep(TimeoutError)
-        await update.edit_caption(caption=custom_caption.format(file_name=media_obj.file_name))
+        await update.edit_caption(caption=CUSTOM_CAPTION.format(file_name=media_obj.file_name))
 
 
 def get_file_details(update):
