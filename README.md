@@ -16,7 +16,7 @@ API_HASH=esx576f8738x883f3sfzx83
 BOT_TOKEN=55838383:yourtbottokenhere
 CUSTOM_CAPTION={file_name}
 ```
-For `CUSTOM_CAPTION` you may also add as `{file_caption}`,`{file_name}` & you can also use <a href='https://core.telegram.org/api/entities#allowed-entities'> html Markdown tags.</a>
+For `CUSTOM_CAPTION` you may use `{file_name}` & you can also use <a href='https://core.telegram.org/api/entities#allowed-entities'> html Markdown tags.</a>
 
 ## VPS Installation
 
