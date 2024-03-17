@@ -21,10 +21,15 @@ For `CUSTOM_CAPTION` you may also add as `{file_caption}`,`{file_name}` & you ca
 ## VPS Installation
 
 ```git clone https://github.com/PrinceStarLord/AutoCaptionBot```
+
 ```cd AutoCaptionBot```
+
 Set up `config.py` file.
+
 ```nano config.py```
+
 CTR + X
+
 ```python3 main.py```
 
 ## Contributing
