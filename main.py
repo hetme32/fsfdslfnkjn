@@ -15,9 +15,9 @@ start_message = """
 
 help_message = """
 <b>Commands :</b>\n
-<b>set_caption : set customised Caption.</b>\n
+<b>/set_caption : set customised Caption.</b>\n
 <b>You can use :</b> <code>{file_name}</code>\n
-<b>You can also use <a href=''>HTML Markdown tags</a></b>
+<b>You can also use <a href='https://core.telegram.org/api/entities#allowed-entities'>HTML Markdown tags</a></b>
 """
 
 @app.on_message(filters.private & filters.command(["start"]))
