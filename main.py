@@ -42,10 +42,10 @@ async def set_custom_caption(_, update):
 async def edit_caption(_, update):
     media_obj, _ = get_file_details(update)
     try:
-        await update.edit_caption(caption=CUSTOM_CAPTION.format(file_name=media_obj.file_name))
+        await update.edit_caption(caption=CUSTOM_CAPTION.format(file_caption=media_obj.file_caption))
     except asyncio.exceptions.TimeoutError as TimeoutError:
         await asyncio.sleep(TimeoutError)
-        await update.edit_caption(caption=CUSTOM_CAPTION.format(file_name=media_obj.file_name))
+        await update.edit_caption(caption=CUSTOM_CAPTION.format(file_caption=media_obj.file_caption))
 
 
 def get_file_details(update):
